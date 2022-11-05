@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="SalesWindows"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="346" d:DesignWidth="630">
+    <Grid Background="#B4000000">
+        <Grid Margin="12,12,12,136">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF8DD8A4" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox Height="28" HorizontalAlignment="Center" Margin="228,25,299,145" Name="txtID" VerticalAlignment="Center" Width="79" MaxLength="10" TabIndex="0" AutoWordSelection="True">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox Height="28" HorizontalAlignment="Center" Margin="228,59,72,111" Name="txtName" VerticalAlignment="Center" Width="306" MaxLength="100" TabIndex="1" AutoWordSelection="True">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="الكود" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="122,25,384,145" Name="Label1" UseLayoutRounding="True" Width="100" VerticalAlignment="Center" BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200"></Label>
+            <Label Content="الاسم" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="122,59,384,111" Name="Label2" UseLayoutRounding="True" Width="100" VerticalAlignment="Center"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200"></Label>
+            <Label Content="الحد الأدنى للفرد" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="122,93,384,77" Name="label7" UseLayoutRounding="True" VerticalAlignment="Center" Width="100"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200"></Label>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="228,93,299,77" MaxLength="10" Name="MinValuePerPerson" TabIndex="6" VerticalAlignment="Center" Width="79" FlowDirection="LeftToRight">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="نسبة الخدمة" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="122,127,384,43" Name="label8" UseLayoutRounding="True" VerticalAlignment="Center" Width="100"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200"></Label>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="227,127,300,43" MaxLength="10" Name="ServicePerc" TabIndex="8" VerticalAlignment="Center" Width="79" FlowDirection="LeftToRight">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="نسبة الضريبة" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="122,192,384,42" Name="label9" UseLayoutRounding="True" VerticalAlignment="Center" Width="100"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200"></Label>
+            <TextBox AutoWordSelection="True" Height="23" HorizontalAlignment="Center" Margin="229,195,298,45" MaxLength="10" Name="TaxPerc" TabIndex="9" VerticalAlignment="Center" Width="79" FlowDirection="LeftToRight">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="%" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="314,192,244,42" Name="Label3" UseLayoutRounding="True" VerticalAlignment="Center" Width="48" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="%" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="314,127,244,43" Name="Label4" UseLayoutRounding="True" VerticalAlignment="Center" Width="48" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="L.E." Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="314,93,244,77" Name="Label5" UseLayoutRounding="True" VerticalAlignment="Center" Width="48" FlowDirection="LeftToRight" />
+        </Grid>
+        <Button Command="{Binding Path=SaveCommand}" Content="أول" HorizontalAlignment="Center"  Margin="162,0,396,12" Name="btnFirst" TabIndex="13" VerticalAlignment="Bottom" Width="72" Background="LimeGreen" />
+        <Button Command="{Binding Path=SaveCommand}" Content="سابق" HorizontalAlignment="Center"  Margin="240,0,318,12" Name="btnPrevios" TabIndex="14" VerticalAlignment="Bottom" Width="72" Background="LimeGreen" />
+        <Button Command="{Binding Path=SaveCommand}" Content="تالى" HorizontalAlignment="Center"  Margin="318,0,240,12" Name="btnNext" TabIndex="15" VerticalAlignment="Bottom" Width="72" Background="LimeGreen" />
+        <Button Command="{Binding Path=SaveCommand}" Content="أخير" HorizontalAlignment="Center"  Margin="396,0,162,12" Name="btnLast" TabIndex="16" VerticalAlignment="Bottom" Width="72" Background="LimeGreen" />
+        <Button Command="{Binding Path=SaveCommand}" Content="حفظ"  Margin="162,0,318,74" Name="btnSave" TabIndex="10" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="150">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#B400FFE8" Offset="0" />
+                    <GradientStop Color="#FF767676" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Command="{Binding Path=SaveCommand}" Content="جديد" HorizontalAlignment="Center"  Margin="318,0,240,74" Name="btnNew" TabIndex="11" VerticalAlignment="Bottom" Width="72">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#B4FFFF00" Offset="0" />
+                    <GradientStop Color="#FF767676" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Command="{Binding Path=SaveCommand}" Content="مسح"  Margin="396,0,162,74" Name="btnDelete" TabIndex="12" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="72">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#B4FF0000" Offset="0" />
+                    <GradientStop Color="#FF767676" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>
